@@ -1,0 +1,104 @@
+#intro-bailodromo
+    background-image: url('/assets/img/bailodromo/fondo.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 100vh
+.header
+    position: relative
+.titulo_cuenta_regresiva
+    text-align: center
+    img
+        width: 27.5rem
+.boton_cerrar
+  border: 2px solid var(--borde_bailodromo)
+  position: absolute
+  right: 0rem
+  top: 0rem
+  i
+    color: var(--borde_bailodromo)    
+.instruccion1
+    text-align: center
+    margin-top: 0.8rem
+    font-size: 0.938rem
+    color: white
+.instruccion2
+    color: white
+    text-align: center    
+    font-size: 1.5rem
+    margin-bottom: 0.5rem
+.contador
+    margin-top: 4rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+.borde_contador
+    text-align: center
+    border: 8px solid white
+    width: 21rem
+    height: 21rem
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+.contador_numero
+    font-size: 13rem
+    font-weight: 700
+    color: white
+    background: radial-gradient(#639FC7, #5491B9, #16577F)
+    width: 18rem
+    height: 18rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+/* MEDIA QUERIES */
+@media (max-width: 1199.98px)
+
+@media (max-width: 991.98px)
+    .borde_contador        
+        width: 19rem
+        height: 19rem        
+    .contador_numero
+        font-size: 12rem        
+        width: 16rem
+        height: 16rem
+
+@media (max-width: 767.98px)
+    .viewport
+        padding: 5% 4%
+    .boton_cerrar    
+        right: -0.5rem
+        top: -3rem      
+        width: 2.8rem
+        height: 2.8rem
+        i
+            font-size: 1.6rem
+    .contador
+        margin-top: 3rem
+    .titulo_cuenta_regresiva
+        margin-top: 2rem
+        img
+            width: 90%
+
+
+@media (max-width: 575.98px)
+    .boton_cerrar    
+        right: -0.3rem
+        top: -2.5rem   
+        width: 2.5rem
+        height: 2.5rem
+        i
+            font-size: 1.5rem
+    .instruccion1
+        line-height: 1
+    .instruccion2
+        font-size: 1.3rem
+    .borde_contador        
+        width: 17rem
+        height: 17rem        
+    .contador_numero
+        font-size: 10rem        
+        width: 14rem
+        height: 14rem

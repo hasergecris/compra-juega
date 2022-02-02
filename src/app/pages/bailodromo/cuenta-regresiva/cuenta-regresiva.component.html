@@ -1,0 +1,18 @@
+<div class="viewport" id="intro-bailodromo">
+    <div class="header">                                
+        <div class="titulo_cuenta_regresiva">            
+            <img src="assets/img/bailodromo/tituloBailodromo2.svg" class="img d-none d-sm-inline">
+            <img src="assets/img/bailodromo/BailodromoMovil.svg" class="img d-inline d-sm-none">
+        </div>
+        <div class="boton_cerrar" [routerLink]="['/bailodromo/intro']">
+            <i class="fas fa-times"></i>
+        </div>      
+        <div class="instruccion1">Haz la secuencia de íconos con tu manos</div>                      
+    </div>
+    <div class="contador">
+        <div class="instruccion2">Alístate para comenzar</div>
+        <div class="borde_contador">
+            <div class="contador_numero">{{contador}}</div>
+        </div>
+    </div>
+</div>

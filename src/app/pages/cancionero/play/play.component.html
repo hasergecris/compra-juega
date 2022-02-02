@@ -1,0 +1,134 @@
+<div class="viewport" id="play">
+  <header class="col-12 d-flex">
+    <div class="header d-block d-sm-flex col-11">
+      <div class="content d-block text-center">
+        <div class="texto_cancionero">
+          <img src="assets/img/cancionero/sub_titulo.svg" class="img d-none d-sm-inline">
+          <img src="assets/img/cancionero/titulo_celular.svg" class="img d-inline d-sm-none">
+        </div>
+        <h3 class="sub_titulo">Completa las letras de las canciones Correctamente</h3>
+      </div>
+      <div class="contadores d-block d-sm-flex ">
+        <div class="texto d-none d-sm-flex">Contador:</div>
+        <div class="borde_contador">
+            <div class="contador">
+            <span class="numero">{{ segundos }}</span>
+            <span>seg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="boton_cerrar mt-2 col-1">
+      <i class="fas fa-times" (click)="cerrar()" [routerLink]="['/home']"></i>
+    </div>
+  </header>
+
+  <main class="contenido_cancionero col-12">
+
+    <div class="opciones" *ngFor="let item of songs; let i=index">
+      <div class="col-inicial">
+          <button type="button" class="btn btn-primary btn-lg {{ item[0].class }}" (click)="selecLeft(i)" >{{ item[0].text }}</button>
+      </div>
+      <div class="col-final">
+          <button type="button" class="btn btn-primary btn-lg {{ item[1].class }}" (click)="selecRight(i)" >{{ item[1].text }}</button>
+      </div>
+    </div>
+
+    <!-- <div class="opciones">
+      <div class="col-inicial">
+          <button type="button" class="btn btn-primary btn-lg azul_claro" data-bs-target="#ganaste" (click)="modalFelicitaciones()">El cielo está cansado ya de ver</button>
+      </div>
+      <div class="col-final">
+          <button type="submit" class="btn btn-primary btn-lg azul_claro" (click)="modalSigueParticipando()" data-bs-target="#ganaste">Ha transformado en hombre a Dennis</button>
+      </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="button" class="btn btn-primary btn-lg azul_claro" data-bs-toggle="modal" data-bs-target="#perdiste">Ama la tierra en que naciste</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg azul_claro" data-bs-toggle="modal" data-bs-target="#perdiste">Ámala es una y nada más</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg verde" data-bs-toggle="modal" data-bs-target="#perdiste">No quiero soñar</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg verde">Tú te lo buscaste</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg rojos" data-bs-toggle="modal" data-bs-target="#perdiste">Si nos dejan</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg rojos">La lluvia caer</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg morado_claro">Es tan fáci</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg azul_claro">Mil veces las mismas cosas</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg morado_claro">Florecita rockera</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg azul_claro">Romper un corazón</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg morado_claro" data-bs-toggle="modal" data-bs-target="#ganaste">Pronto llegará</button>
+        </div>
+        <div class="col-final">
+          <button type="submit" class="btn btn-primary btn-lg azul_claro">Nos vamos a querer toda la vida</button>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="col-inicial">
+            <button type="submit" class="btn btn-primary btn-lg morado_claro" data-bs-toggle="modal" data-bs-target="#ganaste">La luna llena sobre parís</button>
+        </div>
+        <div class="col-final">
+            <button type="submit" class="btn btn-primary btn-lg azul_claro">El día de mi suerte</button>
+        </div>
+    </div> -->
+  </main>
+</div>
+
+<div class="modal fade" id="modalGano" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div><img src="assets/img/bailodromo/gano.jpg" class="w-100"></div>
+        <div class="boton_cerrar" data-bs-dismiss="modal">
+            <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalPerdio" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div><img src="assets/img/bailodromo/perdio.jpg" class="w-100"></div>
+        <div class="boton_cerrar" data-bs-dismiss="modal">
+            <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,177 @@
+#play
+  background-image: url('/assets/img/cancionero/fondo_cancionero.png')
+  background-size: cover
+  height: auto
+  padding-bottom: 7vw
+.header
+  padding: 1%
+  .content
+    padding: 0 1vw 0px 17vw
+    width: 100%
+  .texto_cancionero
+    display: flex
+    justify-content: center
+    margin: 0.5rem 0rem
+    img
+      width: 40vw
+  .sub_titulo
+    font-size: 0.938rem
+    -webkit-text-fill-color: var(--blancos)
+    font-weight: 500
+.texto
+  color: var(--borde-letras)
+  margin-right: .5rem
+  padding-top: 1.6rem
+  font-size: 0.688rem
+  font-weight: 500
+.contadores
+  display: flex
+  justify-content: center
+.borde_contador
+  border: 2px solid var(--blancos)
+  width: 4.3rem
+  height: 4.3rem
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+.contador
+  position: absolute
+  background-color: var(--borde-letras)
+  width: 3.625rem !important
+  height: 3.625rem !important
+  border-radius: 50% !important
+  color: var(--blancos)
+  span
+    display: block
+    line-height: 0.313rem
+    text-align: center
+    margin-top: 1rem
+    font-size: 1rem
+  .numero
+    line-height: 0.25rem
+    font-size: 1.3rem !important
+.boton_cerrar
+  border: 2px solid var(--borde-letras)
+  right: 0rem
+  top: 0rem
+  i
+    color: var(--borde-letras)
+.contenido_cancionero
+  display: block
+  justify-content: space-around
+  margin-top: 2rem
+.opciones
+  display: flex
+  justify-content: space-evenly
+  margin-bottom: 1rem
+.btn
+  border: none
+  height: 3.5rem
+  width: 20vw
+  border-radius: 5rem
+  font-size: 1rem
+  font-weight: 500
+  text-align: flex-start
+  line-height: 1rem
+.azul_claro
+  background: rgb(19,71,103)
+  background: linear-gradient(0deg, rgba(19,71,103,1) 0%, rgba(20,79,114,1) 50%, rgba(99,159,199,1) 100%)
+.morado_claro
+  background: rgb(91,58,128)
+  background: linear-gradient(0deg, rgba(91,58,128,1) 26%, rgba(150,107,158,1) 100%)
+.verde
+  background: rgb(0,60,36)
+  background: linear-gradient(0deg, rgba(0,60,36,1) 0%, rgba(0,106,58,1) 50%, rgba(60,145,118,1) 100%)
+.rojos
+  background: rgb(130,34,59)
+  background: linear-gradient(0deg, rgba(130,34,59,1) 0%, rgba(203,53,95,1) 50%, rgba(214,126,134,1) 100%)
+
+
+  /* MEDIA QUERIES */
+
+@media (max-width: 1199.98px)
+
+@media (max-width: 991.98px)
+  #play
+    padding-bottom: 28vw
+  .content
+    padding: 0 0 0 15vw !important
+    margin-top: 3rem !important
+    .borde_contador
+      width: 3rem
+      height: 3rem
+      .contador
+        width: 2.5rem !important
+        height: 2.5rem !important
+        span
+          font-size: 0.875rem !important
+      .numero
+        line-height: 1 !important
+  .texto_cancionero
+    margin: 0.3rem 0rem
+    img
+      width: 50vw !important
+  .sub_titulo
+    font-size: 0.813rem !important
+  .texto
+    padding-top: 1.5rem
+  #funcionaPublica
+    height: 2.8rem !important
+    width: 2.8rem !important
+  span
+    font-size: .8rem !important
+  .numero
+    font-size: 1.2rem !important
+  .contenido_cancionero
+    margin-top: 1rem !important
+  .btn
+    font-size: 0.813rem !important
+    height: 3rem !important
+    width: 22vw !important
+
+@media (max-width: 767.98px)
+  .contadores
+    flex-direction: column
+    .borde_contador
+      width: 3.5rem
+      height: 3.5rem
+      .contador
+        width: 3rem !important
+        height: 3rem !important
+      .numero
+        font-size: 1rem !important
+        line-height: 1px
+  .boton_cerrar
+      right: -0.5rem
+      top: -1rem
+      width: 2.8rem
+      height: 2.8rem
+      i
+        font-size: 1.6rem
+  .btn
+    font-size: 0.688rem !important
+    line-height: 1
+
+
+@media (max-width: 575.98px)
+    .content
+      padding: 0 0 0 7vw !important
+    .texto_cancionero
+      margin: 0.3rem 0rem
+      img
+        width: 78vw !important
+    .contadores
+        margin-left: 41vw
+    .boton_cerrar
+      right: -0.3rem
+      top: -0.5rem
+      width: 2.5rem
+      height: 2.5rem
+      i
+        font-size: 1.5rem
+    .opciones
+      margin-bottom: .5rem
+    .btn
+      width: 40vw !important
+

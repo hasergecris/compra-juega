@@ -1,0 +1,47 @@
+<div class="viewport" id="intro-bailodromo">
+    <div class="header">
+        <div class="titulo_cuenta_regresiva">
+          <img src="assets/img/bailodromo/tituloBailodromo2.svg" class="img d-none d-sm-inline">
+          <img src="assets/img/bailodromo/BailodromoMovil.svg" class="img d-inline d-sm-none">
+        </div>
+        <div class="boton_cerrar" (click)="cerrar()" [routerLink]="['../../intro']">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="tituloBaile">{{tituloBaile}}</div>
+        <div class="instruccion1">Haz la secuencia de íconos con tu manos</div>
+    </div>
+    <div class="baile">
+        <div *ngFor="let paso of baileReproducir; let i=index"  id="paso{{i+1}}" class="paso" [class.activo] = "paso.activo"><img src="assets/img/bailodromo/senales/mano{{paso.movimiento}}.png" class="img"></div>
+    </div>
+    
+    <div class="row botones_calificacion" *ngIf="mostrarBotonesCalificacion">
+        <div class="col-12">
+            <div class="grupo_botones_bailodromo">
+              <button class="btn_bailodromo" (click)="sonidoGana()" data-bs-toggle="modal" data-bs-target="#modalGano">Ganó!</button>
+              <button class="btn_bailodromo" (click)="sonidoPierde()" data-bs-toggle="modal" data-bs-target="#modalPerdio">Perdió!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalGano" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div><img src="assets/img/bailodromo/gano.png" class="w-100"></div>
+        <div class="boton_cerrar" data-bs-dismiss="modal">
+            <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalPerdio" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div><img src="assets/img/bailodromo/perdio.png" class="w-100"></div>
+        <div class="boton_cerrar" data-bs-dismiss="modal">
+            <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+</div>

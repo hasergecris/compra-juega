@@ -1,0 +1,457 @@
+.viewport
+    min-height: 100vh
+    padding: 0rem
+.receta
+  background-image: url('../../../../assets/img/receta/img_fondo.png')
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 100vh
+  padding-bottom: 10vw
+  display: flex
+  flex-direction: column
+  align-items: center
+.degradado
+  background: linear-gradient(var(--fondo-receta), 80%, transparent)
+  width: 100vw
+  padding: 1.2rem 0rem 0rem 0rem
+.header
+  position: relative
+  width: 100%
+  .bloque
+    padding: 0 1vw 0px 24vw
+    width: 80%
+  .titulo
+    display: flex
+    justify-content: center
+    margin: 0.5rem 0rem
+    img
+      width: 40vw
+.texto
+  color: var(--borde-letras)
+  margin-right: .5rem
+  padding-top: 1.6rem
+  font-size: 0.688rem
+  font-weight: 500
+.contadores
+  display: flex
+.borde_contador
+  border: 2px solid var(--blancos)
+  width: 4.3rem
+  height: 4.3rem
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+.contador
+  position: absolute
+  background-color: var(--verde-exit) !important
+  width: 3.625rem !important
+  height: 3.625rem !important
+  border-radius: 50% !important
+  color: var(--blancos)
+  span
+    display: block
+    line-height: 0.313rem
+    text-align: center
+    margin-top: 1rem
+    font-size: 1rem
+  .numero
+    line-height: 0.25rem
+    font-size: 1.3rem !important
+.boton_cerrar
+  border: 2px solid var(--verde-exit)
+  position: absolute
+  right: 1rem
+  top: 0rem
+  i
+    color: var(--verde-exit)
+.producto
+  text-align: center
+  font-weight: 700
+  margin-top: 0.5rem
+  font-size: 1.5rem
+  color: var(--blancos)
+.subtitle
+  text-align: center
+  margin-top: 0.2rem
+  font-size: 0.938rem
+  font-weight: 500
+  color: var(--blancos)
+  margin-bottom: 1.5rem
+.content
+  background-size: cover
+  width: 100vw
+  height: 42vw
+  max-height: 32rem
+  position: relative
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  padding: 3% 0%
+  div:not(:first-child)
+    width: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index:10
+  div:not(:first-child):nth-child(even)
+    .nombre_ingrediente
+      writing-mode: vertical-lr
+      transform: rotate(180deg)
+      text-align: center
+      font-size: 0.875rem
+      font-weight: 700
+      color: var(--verde-exit)
+      padding: 0 1rem
+      line-height: 1
+  div:not(:first-child):nth-child(odd)
+    flex-direction: row-reverse
+    .nombre_ingrediente
+      writing-mode: vertical-rl
+      transform: rotate(180deg)
+      text-align: center
+      font-size: 0.875rem
+      font-weight: 700
+      color: var(--verde-exit)
+      padding: 0 1rem
+      line-height: 1
+.cont
+  height: 100%
+  align-items: center
+button
+  border: 0
+  border-radius: 1rem
+  width: 7rem
+  height: 7rem
+  background: linear-gradient(to bottom, var(--morado-claro1), var(--morado1))
+.img_pancake
+  position: absolute
+  left: 34.5%
+  top: 14%
+  img
+    height: 28vw
+.img_flan
+  position: absolute
+  left: 36.5%
+  top: 14%
+  img
+    height: 28vw
+.cuchara_izquierda
+  position: absolute
+  left: 11.5%
+  top: 50%
+  img
+    height: 18vw
+.cuchara_derecha
+  position: absolute
+  right: 10%
+  top: 50%
+  img
+    height: 18vw
+.sarten
+  position: absolute
+  right: -23.5%
+  top: 21%
+  img
+    height: 25vw
+.sarten_izq
+  position: absolute
+  left: -23.5%
+  top: 21%
+  img
+    height: 25vw
+.img_hamburguesa
+  position: absolute
+  left: 36.5%
+  top: 14%
+  img
+    height: 28vw
+.selected
+  border: solid 3px green !important
+  background: linear-gradient(to bottom, green , green ) !important
+.modal-content
+  position: relative
+  border: none !important
+  .boton_cerrar
+    position: absolute
+    border: 2px solid var(--fondo-receta)
+    right: 1vw
+    top: 0.5rem
+    i
+      color: var(--fondo-receta)
+
+@media (max-width: 1199.98px)
+  .bloque
+    width: 78% !important
+  .nombre_ingrediente
+    font-size: 0.82rem !important
+    overflow-wrap: break-word
+    inline-size: 7rem
+  .cuchara_izquierda
+    left: 14%
+    top: 57%
+  .cuchara_derecha
+    right: 12%
+    top: 57%
+  .sarten
+    right: -23%
+    top: 20%
+    img
+      height: 30vw
+  .sarten_izq
+    left: -19%
+    top: 20%
+    img
+      height: 30vw
+
+@media (max-width: 991.98px)
+  .bloque
+    padding: 0 0 0 23vw !important
+    width: 75% !important
+    .borde_contador
+      width: 3rem
+      height: 3rem
+      .contador
+        width: 2.5rem !important
+        height: 2.5rem !important
+        span
+          font-size: 0.875rem !important
+      .numero
+        line-height: 1 !important
+  .titulo
+    margin: 0.3rem 0rem
+    img
+      width: 50vw !important
+  .texto
+    padding-top: 1.5rem
+  .modal-dialog
+    max-width: 700px
+  .title
+    font-size: 2rem
+  .text-vertical
+    height: 11vw
+  .subtitle
+    margin-bottom: 3rem
+  .content
+    height: 50vw
+    div:not(:first-child):nth-child(even)
+      padding-right: 8%
+    div:not(:first-child):nth-child(odd)
+      padding-left: 8%
+  .img_pancake
+    top: 22%
+  .img_flan
+    top: 22%
+  .img_hamburguesa
+    top: 22%
+  .cuchara_izquierda
+    left: 16%
+    top: 50%
+    img
+      height: 25vw
+  .cuchara_derecha
+    right: 14%
+    top: 50%
+    img
+      height: 25vw
+  .sarten
+    right: -27%
+    top: 20%
+    img
+      height: 35vw
+  button
+    width: 10vw
+    height: 10vw
+    img
+    .huevos
+        width: 90%
+    .harina
+        width: 65%
+    .leche
+        width: 50%
+    .perejil
+        width: 75%
+    .mantequilla
+        width: 100%
+    .sal
+        width: 90%
+    .vainilla
+        width: 60%
+    .caramelo
+        width: 75%
+    .azucar
+        width: 85%
+    .fresas
+        width: 85%
+    .pan
+        width: 90%
+    .carne
+        width: 100%
+    .pimenton
+        width: 80%
+    .verdura
+        width: 100%
+    .queso
+        width: 90%
+    .lechuga
+        width: 80%
+
+@media (max-width: 767.98px)
+  .contadores
+    flex-direction: column
+    margin: 0vw 5vw
+    .borde_contador
+      width: 3.5rem
+      height: 3.5rem
+      .contador
+        width: 3rem !important
+        height: 3rem !important
+      .numero
+        font-size: 1rem !important
+        line-height: 1px
+  .modal-dialog
+      max-width: 95%
+  .modal-content
+      .boton_cerrar
+          right: 0rem
+          top: 0rem
+  .content
+    height: 65vw
+    div:not(:first-child):nth-child(even)
+      padding-right: 22%
+    div:not(:first-child):nth-child(odd)
+      padding-left: 22%
+  .img_pancake
+    top: 22%
+    left: 30%
+    img
+      height: 35vw
+  .img_flan
+    top: 22%
+    left: 33%
+    img
+      height: 35vw
+  .img_hamburguesa
+    top: 22%
+    left: 33%
+    img
+      height: 35vw
+  .cuchara_izquierda
+    left: 20%
+    img
+      height: 30vw
+  .cuchara_derecha
+    right: 17%
+    img
+      height: 30vw
+  .sarten
+    display: none !important
+  .sarten_izq
+    display: none !important
+  .contenedor
+    min-width: 100vw
+  button
+    width: 15vw
+    height: 15vw
+  .degradado
+    height: auto
+  .titulo
+    img
+      width: 60vw !important
+  .boton_cerrar
+    right: 1rem
+    width: 2.8rem
+    height: 2.8rem
+    i
+      font-size: 1.6rem
+  .producto
+    font-size: 1.2rem
+  .subtitle
+    font-size: .9rem
+  .text-vertical
+    font-size: 0.7rem !important
+  .left
+    margin-top: 3vw
+  .right
+    margin-top: 3vw
+
+
+@media (max-width: 575.98px)
+  .bloque
+    padding: 0 !important
+    margin-top: 3rem
+    width: 100% !important
+  .titulo
+    margin: 0.3rem 0rem
+    img
+      width: 78vw !important
+  .contadores
+    margin-left: 43vw
+  .subtitle
+    margin-bottom: 1rem
+  .content
+    height: 130vw
+    div:not(:first-child)
+      width: 33%
+    div:not(:first-child):nth-child(even)
+      padding-right: 0%
+      flex-direction: column
+    div:not(:first-child):nth-child(odd)
+      padding-left: 0%
+      flex-direction: column
+    div:not(:first-child)
+      :nth-child(4)
+        flex-direction: column-reverse
+    div:not(:first-child):nth-child(2), div:not(:first-child):nth-child(3), div:not(:first-child):nth-child(4)
+      padding-bottom: 22%
+    div:not(:first-child):nth-child(5), div:not(:first-child):nth-child(6), div:not(:first-child):nth-child(7)
+      padding-top: 22%
+      flex-direction: column-reverse
+  .img_pancake
+    top: 30%
+    left: 25%
+    img
+      height: 43vw
+  .img_flan
+    top: 9rem
+    left: 30%
+    img
+      height: 43vw
+  .img_hamburguesa
+    top: 9rem
+    left: 30%
+    img
+      height: 43vw
+  .cuchara_izquierda
+    top: 36%
+    left: 3%
+    img
+      height: 40vw
+  .cuchara_derecha
+    top: 36%
+    right: 3%
+    img
+      height: 40vw
+  .boton_cerrar
+      right: 3rem
+      width: 2.5rem
+      height: 2.5rem
+      i
+        font-size: 1.5rem
+  .text-vertical
+    writing-mode: horizontal-tb
+    transform: rotate(0deg)
+    width: 8vw
+    text-align: center
+    font-size: 0.75rem !important
+    align-items: center
+  .nombre_ingrediente
+      writing-mode: unset !important
+      transform: unset !important
+      padding: 0rem !important
+      font-size: 0.7rem !important
+      margin: 0.3rem 0rem
+  button
+    height: 4rem
+    width: 4rem
+

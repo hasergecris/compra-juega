@@ -1,0 +1,42 @@
+<div class="viewport" id="intro-cancionero">
+  <div class="header">
+    <div class="row">
+      <div class="col-9 logo">
+        <img src="assets/img/bailodromo/logo.png" class="img">
+      </div>
+      <div class="col-3 d-flex justify-content-end">
+        <div class="boton_cerrar">
+          <i class="fas fa-times" [routerLink]="['/home']"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenido_cancionero d-flex">
+    <div class="intro_juego">
+      <div class="textos_intro">
+        <img src="assets/img/cancionero/disfrutar.png" class="img" id="Distrutar">
+        <p class="renovar">es renovar tu baño, transformándolo en un escenario.</p>
+        <img src="assets/img/cancionero/productos.png" class="img_productos" />
+      </div>
+      <div class="imagen_intro">
+          <img src="assets/img/cancionero/persona.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="texto_cancionero">
+        <img src="assets/img/cancionero/sub_titulo.svg" class="img d-none d-sm-block">
+        <img src="assets/img/cancionero/titulo_celular.svg" class="img d-block d-sm-none">
+      </div>
+      <div class="opciones_cancionero">
+        <button class="btn_comenzar" [routerLink]="['../play']">
+          <span>Comienza a jugar</span><i class="fas fa-play"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

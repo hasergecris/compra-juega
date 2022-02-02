@@ -1,0 +1,126 @@
+#intro-bailodromo
+    background-image: url('/assets/img/bailodromo/fondo.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+.header
+    position: relative
+    width: 100%
+.titulo_cuenta_regresiva
+    text-align: center
+    img
+        width: 27.5rem
+.boton_cerrar
+  border: 2px solid var(--borde_bailodromo)
+  position: absolute
+  right: 0rem
+  top: 0rem
+  i
+    color: var(--borde_bailodromo)
+.tituloBaile
+    text-align: center
+    margin-top: 0.8rem
+    font-size: 1.5rem
+    color: white
+.instruccion1
+    text-align: center
+    margin-top: 0.2rem
+    font-size: 0.938rem
+    font-weight: 400
+    color: white
+.baile
+    display: flex
+    flex-wrap: wrap
+    padding: 7% 5%
+.paso
+    width: 8.75rem
+    height: 8.75rem
+    background: linear-gradient(#639FC7, #16577F, #134767)
+    margin: 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 1.8rem
+    padding: 1rem
+    img
+        width: 100%
+.activo
+    background: linear-gradient(#966B9E 10%, #5B3A80 75%)
+.botones_calificacion
+    width: 80%
+
+/* MEDIA QUERIES */
+@media (max-width: 1199.98px)
+    .paso
+        width: 8rem
+        height: 8rem
+    .botones_calificacion
+        width: 100%
+
+@media (max-width: 991.98px)
+    .modal-dialog
+        max-width: 700px
+    .baile
+        padding: 7% 2%
+    .paso
+        width: 7.5rem
+        height: 7.5rem
+        margin: 0.5rem
+    .grupo_botones_bailodromo
+        padding: 0% 10%
+
+@media (max-width: 767.98px)
+    .modal-dialog
+        max-width: 95%
+    .modal-content
+        .boton_cerrar
+            right: 0rem
+            top: 0rem
+    .viewport
+        padding: 5% 4%
+    .titulo_cuenta_regresiva
+        margin-top: 2rem
+    .boton_cerrar
+        right: -0.5rem
+        top: -1rem
+        width: 2.8rem
+        height: 2.8rem
+        i
+            font-size: 1.6rem
+    .baile
+        justify-content: center
+    .paso
+        width: 7.2rem
+        height: 7.2rem
+        margin: 0.8rem
+    .grupo_botones_bailodromo
+        padding: 0% 5%
+    .btn_bailodromo
+        width: 13rem
+@media (max-width: 575.98px)
+    .titulo_cuenta_regresiva
+        img
+          width: 100%
+    .boton_cerrar
+        right: -0.3rem
+        top: -0.5rem
+        width: 2.5rem
+        height: 2.5rem
+        i
+            font-size: 1.5rem
+    .paso
+        width: 7rem
+        height: 7rem
+        margin: 0.5rem
+    .grupo_botones_bailodromo
+        flex-direction: column
+        align-items: center
+    .btn_bailodromo
+        width: 14rem
+        margin-bottom: 0.5rem
+
+
+

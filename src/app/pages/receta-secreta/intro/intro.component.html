@@ -1,0 +1,43 @@
+<div class="viewport" id="intro-receta">
+  <div class="header">
+    <div class="row">
+      <div class="col-9 logo">
+          <img src="../../../assets/img/receta/logo SCJOHNSON.png" class="img">
+      </div>
+      <div class="col-3 d-flex justify-content-end">
+        <div class="boton_cerrar">
+          <i class="fas fa-times" [routerLink]="['/home']"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contenido_receta d-flex">
+    <div class="intro_juego">
+      <div class="textos_intro">
+        <img src="../../../../assets/img/receta/title.png" class="img" id="DistrutarTuVida">
+        <p class="renovar">es renovar tus platos, tranformándolos en lienzos llenos de sabor.</p>
+        <img src="../../../assets/img/receta/img_productos.png" class="img_productos" />
+      </div>
+      <div class="imagen_intro">
+        <img src="../../../assets/img/receta/img_intro.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="texto_receta">
+        <img src="assets/img/receta/titulos.svg" class="img d-none d-sm-block">
+        <img src="assets/img/receta/titulos_celular.svg" class="img d-block d-sm-none">
+      </div>
+
+      <div class="botones">
+        <div class="bot one"><button type="submit" class="boton" [routerLink]="['../play', 'Pancakes']"><span class="textt">Pancakes</span><span class="icon"><i class="fas fa-play"></i></span></button></div>
+        <div class="bot two"><button type="submit" class="boton" [routerLink]="['../play', 'Flan de caramelo']"><span class="textt">Flan de caramelo</span> <span class="icon"><i class="fas fa-play"></i></span></button></div>
+        <div class="bot three"><button type="submit" class="boton" [routerLink]="['../play', 'Hamburguesa']"><span class="textt">Hamburguesa</span> <span class="icon"><i class="fas fa-play"></i></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="viewport" id="intro-bailodromo">
+    <div class="header">
+        <div class="row">
+            <div class="col-9 logo">
+                <img src="assets/img/bailodromo/logo.png" class="img">
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div class="boton_cerrar">
+                    <i class="fas fa-times" [routerLink]="['/home']"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenido_bailodromo d-flex">
+        <div class="intro_juego">
+            <div class="textos_intro">
+                <img src="assets/img/bailodromo/DisfrutarTuVida.svg" class="img" id="DistrutarTuVida">
+                <p class="renovar">es renovar tu baño, transformándolo en un escenario.</p>
+                <img src="assets/img/bailodromo/productos_bailodromo.png" class="img_productos" />
+            </div>
+            <div class="imagen_intro">
+                <img src="assets/img/bailodromo/imagen_bailodromo.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="texto_bailodromo">
+            <img src="assets/img/bailodromo/Bailodromo.svg" class="img d-none d-sm-block">
+            <img src="assets/img/bailodromo/BailodromoMovil.svg" class="img d-block d-sm-none">
+        </div>
+        <div class="grupo_botones_bailodromo">
+          <button class="btn_bailodromo" [routerLink]="['/bailodromo/cuenta-regresiva','1']">
+          <span>Baila baila</span><i class="fas fa-play"></i>
+          </button>
+          <button class="btn_bailodromo" [routerLink]="['/bailodromo/cuenta-regresiva','2']">
+            <span>Manito  manito</span><i class="fas fa-play"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="viewport" id="play-receta">
+  <div class="contenedor " *ngFor="let data of Product">
+    <div class="receta" *ngIf="data.etiqueta == id">
+      <header class="degradado">
+
+        <div class="header d-block d-sm-flex">
+          <div class="bloque d-block text-center">
+            <div class="titulo">
+              <img
+                src="assets/img/receta/titulos.svg"
+                class="img d-none d-sm-inline"
+              />
+              <img
+                src="assets/img/receta/titulos_celular.svg"
+                class="img d-inline d-sm-none"
+              />
+            </div>
+            <div class="producto">{{ data.etiqueta }}</div>
+            <div class="subtitle">Elige los ingredientes correctos</div>
+          </div>
+
+          <div class="contadores d-block d-sm-flex">
+            <div class="texto d-none d-sm-flex">Contador:</div>
+            <div class="borde_contador">
+              <div class="contador">
+                <span class="numero">{{ segundos }}</span>
+                <span>seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="boton_cerrar mt-2" (click)="cerrar()" [routerLink]="['../../intro']">
+            <i class="fas fa-times"></i>
+          </div>
+      </header>
+
+      <div class="content col-12" style="background-image: url('{{ data.fondo }}');">
+          <div id="elementosFondoPancake" *ngIf="data.name == 'pancakes'">
+            <div class="img_pancake">
+              <img src="../../../assets/img/receta/plato_pancakes.svg">
+            </div>
+          </div>
+          <div id="elementosFondoFlanCaramelo" *ngIf="data.name == 'flan_caramelo'">
+            <div class="img_flan">
+              <img src="../../../assets/img/receta/plato_flan.png">
+            </div>
+            <div class="cuchara_izquierda">
+              <img src="../../../assets/img/receta/cuchara1.svg">
+            </div>
+            <div class="cuchara_derecha">
+              <img src="../../../assets/img/receta/cuchara2.svg">
+            </div>
+            <div class="sarten">
+              <img src="../../../assets/img/receta/img_sarten_negro.svg">
+            </div>
+          </div>
+          <div id="elementosFondoHamburguesa" *ngIf="data.name == 'hamburguesa'">
+            <div class="img_hamburguesa">
+              <img src="../../../assets/img/receta/plato_hamburguesa.svg">
+            </div>
+            <div class="cuchara_izquierda">
+              <img src="../../../assets/img/receta/cuchara3.svg">
+            </div>
+            <div class="cuchara_derecha">
+              <img src="../../../assets/img/receta/cuchara4.svg">
+            </div>
+            <div class="sarten_izq">
+              <img src="../../../assets/img/receta/sarten_izq.svg">
+            </div>
+          </div>
+          <div *ngFor="let img of data.ingredientes; let i = index">
+              <div class="nombre_ingrediente">
+                {{ img.name }}
+              </div>
+              <button
+                type="button"
+                [ngClass]="{ selected: img.selec }"
+                (click)="seleccionar(i)"
+              >
+                <img src="{{ img.img }}" class="{{ img.css }}" alt="" />
+              </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalWinner let-modal>
+  <div class="modal-content">
+    <div class="boton_cerrar d-flex">
+      <i class="fas fa-times" (click)="exit()"></i>
+    </div>
+    <img src="../../../../assets/img/receta/ganaste.png" class="w-100" />
+  </div>
+</ng-template>
+
+<ng-template #modalIntenta let-modal>
+  <div class="modal-content">
+    <div class="boton_cerrar">
+      <i class="fas fa-times" (click)="exit()"></i>
+    </div>
+    <div>
+      <img src="../../../../assets/img/receta/intentalo.png" class="w-100" />
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,139 @@
+:root
+  --fondo_intro: #50bcdd
+  --borde_bailodromo: #134767
+  --blancos: #fff
+  --color_iconos: #134767
+  --borde-letras: #5b3a80
+  --fondo_cancionero:#C57FD6
+  --boton_salir: #B38CBB
+  --fondo-receta: #A1CB89
+  --verde-exit: #347141
+  --verde-boton-claro: #5CA37B
+  --verde-blanc: #3A9176
+  --verde-boton: #003C24
+  --fucsia: rgba(130,34,59,1)
+  --morado: rgba(74,46,102,1)
+  --morado1: #662D91
+  --morado-claro: rgba(150,107,158,1)
+  --morado-claro1: #8C50CC
+  --morado_oscuro: #4A2E66
+  --moradito: #966B9E
+
+html,
+body
+  width: 100vw
+  min-height: 100%
+
+
+app-root,
+app-receta-secreta
+  width: 100vw
+  height: 100%
+
+@font-face
+  font-family: "Gotham"
+  src: url(assets/fonts/Gotham-Black.otf) format("opentype")
+  font-weight: 800
+  font-style: normal
+@font-face
+  font-family: "Gotham"
+  src: url(assets/fonts/Gotham-Bold.otf) format("opentype")
+  font-weight: 700
+  font-style: normal
+@font-face
+  font-family: "Gotham"
+  src: url(assets/fonts/Gotham-Ultra.otf) format("opentype")
+  font-weight: 900
+  font-style: normal
+@font-face
+  font-family: "Gotham"
+  src: url(assets/fonts/GothamMedium.ttf) format("truetype")
+  font-weight: 500
+  font-style: normal
+body
+  font-family: "Gotham" !important
+
+.btn
+  font-weight: 600
+
+//Background
+.viewport
+  padding: 2.2% 3% 8%
+
+// Header
+.logo
+  .img
+    width: 7.688rem
+.boton_cerrar
+  border-radius: 50%
+  width: 3.5rem
+  height: 3.5rem
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 1%
+  i
+    font-size: 2rem
+.boton_cerrar:hover
+  background: rgba(255,255,255,0.3)
+  cursor: pointer
+
+  //Titulos
+.titulo_intro
+  color: var(--blancos)
+  font-weight: 900
+  font-size: 4rem
+  line-height: 0.9
+  -webkit-text-stroke: 14px var(--borde_bailodromo)
+  paint-order: stroke fill
+
+
+//Botones
+.grupo_botones_bailodromo
+  padding: 0% 20%
+  display: flex
+  justify-content: space-around
+.btn_bailodromo
+  color: var(--blancos)
+  border-radius: 5rem
+  background-color: transparent
+  font-size: 1.125rem
+  font-weight: 600
+  border: solid 0.063rem transparent
+  background-image: linear-gradient(var(--fondo_intro), var(--fondo_intro)), radial-gradient(circle, #639FC7, #134767)
+  background-origin: border-box
+  background-clip: content-box, border-box
+  padding: 0.3rem
+  width: 16rem
+  height: 3.5rem
+  display: flex
+  align-items: center
+  justify-content: center
+  span
+    margin-left: 2.5rem
+  i
+    margin-right: 1rem
+
+.btn_bailodromo:hover
+  background-image: linear-gradient(#65C4E1, #65C4E1), radial-gradient(circle, #639FC7, #134767)
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1199.98px)
+
+@media (max-width: 991.98px)
+
+
+@media (max-width: 767.98px)
+
+
+
+
+@media (max-width: 575.98px)
+  .boton_cerrar
+    width: 2.3rem
+    height: 2.3rem
+    margin: -7%
+    i
+      font-size: 1.5rem

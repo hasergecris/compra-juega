@@ -1,0 +1,73 @@
+#home
+  background-image: url('/assets/img/bailodromo/fondo.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 100vh
+.imagen_fondo
+  background-size: contain
+  position: fixed
+  height: 100vw
+  width: 100vw
+  background-position: center
+.contenido
+  position: relative
+  // background: var(--fondo_intro)
+  padding: 2%
+.logo
+  .img
+    width: 10rem
+.icono
+  color: var(--color_iconos)
+  font-size: 2.5rem
+  cursor: pointer
+.titulo_navegacion
+  text-align: center
+  font-size: 8rem
+  margin-top: 5%
+  font-weight: 900
+  -webkit-text-fill-color: var(--blancos)
+  -webkit-text-stroke: 4px var(--borde-letras)
+.navbar
+  flex-direction: column
+  line-height: 1
+.botones_inicio
+  margin-bottom: 0.5rem
+  .btn
+    width: 224px
+    background: rgb(91,58,128)
+    background: linear-gradient(90deg, rgba(91,58,128,1) 26%, rgba(150,107,158,1) 100%)
+    border-radius: 5rem
+    border: 3px solid var(--borde-letras)  
+    display: flex
+    align-items: center
+    justify-content: center
+.botones_inicio .btn:hover
+  background: var(--fondo-receta)
+
+/* MEDIA QUERIES */
+@media (max-width: 1199.98px)
+
+@media (max-width: 991.98px)
+  .titulo_navegacion    
+    font-size: 6rem
+
+@media (max-width: 767.98px)
+  .titulo_navegacion    
+    font-size: 5rem
+    -webkit-text-stroke: 3px var(--borde-letras)
+    margin-top: 10%
+
+@media (max-width: 575.98px)
+  .titulo_navegacion    
+    font-size: 3rem
+    -webkit-text-stroke: 2px var(--borde-letras)
+    margin-top: 15%
+    margin-bottom: 8%
+  .botones_inicio
+    margin-bottom: 0.8rem
+    .btn                  
+      border: 2px solid var(--borde-letras)  
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 1rem
